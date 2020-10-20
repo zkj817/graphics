@@ -53,7 +53,7 @@ _LABELS = [
 # --- registers the checksum
 _CHECKSUM_DIR = os.path.join(os.path.dirname(__file__), 'checksums/')
 _CHECKSUM_DIR = os.path.normpath(_CHECKSUM_DIR)
-tfds.download.add_checksums_dir(_CHECKSUM_DIR)
+tfds.deprecated.add_checksums_dir(_CHECKSUM_DIR)
 
 
 class ModelNet40(tfds.core.GeneratorBasedBuilder):

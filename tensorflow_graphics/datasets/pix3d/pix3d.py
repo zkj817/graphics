@@ -83,7 +83,7 @@ Train/Test split:
 _CHECKSUMS_DIR = os.path.normpath(
     os.path.join(os.path.dirname(__file__), 'checksums/')
 )
-tfds.download.add_checksums_dir(_CHECKSUMS_DIR)
+tfds.deprecated.add_checksums_dir(_CHECKSUMS_DIR)
 
 
 class Pix3d(tfds.core.GeneratorBasedBuilder):
