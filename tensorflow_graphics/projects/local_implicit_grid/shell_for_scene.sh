@@ -14,7 +14,7 @@ do
             --part_size=${part_size[i]}
 
             echo ${part_size[i]} ${points[j]}
-            mv demo_data/interior_room_${points[j]}.reconstruct.ply demo)data/interior_room_${points[j]}_${part_size[i]}.reconstruct.ply 
+            mv demo_data/interior_room_${points[j]}.reconstruct.ply demo_data/interior_room_${points[j]}_${part_size[i]}.reconstruct.ply 
         fi
     done
 done
