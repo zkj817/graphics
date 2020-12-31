@@ -5,11 +5,16 @@ for((i=0;i<=3;i++));
 do
     for((j=0;j<=3;j++));
     do
-        python reconstruct_geometry.py \
-        --input_ply demo_data/interior_room_${points[j]}.ply \
-        --part_size=${part_size[i]}
+        if(($i==0))&&(($j==0));
+        then
+            continue
+        else
+            python reconstruct_geometry.py \
+            --input_ply demo_data/interior_room_${points[j]}.ply \
+            --part_size=${part_size[i]}
 
-        echo ${part_size[i]} ${points[j]}
-        mv interior_room_${points[j]}.reconstruct.ply interior_room_${points[j]}_${part_size[i]}.reconstruct.ply 
+            echo ${part_size[i]} ${points[j]}
+            mv demo_data/interior_room_${points[j]}.reconstruct.ply demo)data/interior_room_${points[j]}_${part_size[i]}.reconstruct.ply 
+        fi
     done
 done
